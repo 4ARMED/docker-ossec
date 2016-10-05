@@ -8,7 +8,7 @@ MAINTAINER Jose Luis Ruiz <jose@wazuh.com>
 #
 RUN apt-key adv --fetch-keys http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key &&\
   echo "deb http://ossec.wazuh.com/repos/apt/ubuntu trusty main" >> /etc/apt/sources.list &&\
-  apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -yf install ossec-hids
+  apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -yf install expect ossec-hids
 
 #
 # Add a default agent due to this bug

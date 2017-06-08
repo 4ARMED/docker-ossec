@@ -1,12 +1,12 @@
 FROM phusion/baseimage:0.9.15
-MAINTAINER Jose Luis Ruiz <jose@wazuh.com>
+MAINTAINER Marc Wickenden <marc@4armed.com>
 
 
 #
 # Follow the server installation parameters specified on the OSSEC website for
 # ubuntu installations
 #
-RUN apt-key adv --fetch-keys http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key &&\
+RUN /usr/bin/curl -sL https://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key | apt-key add - &&\
   echo "deb http://ossec.wazuh.com/repos/apt/ubuntu trusty main" >> /etc/apt/sources.list &&\
   apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -yf install expect ossec-hids
 

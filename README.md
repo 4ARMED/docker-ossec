@@ -2,6 +2,8 @@
 
 An ossec-server image with the ability to separate the ossec configuration/data from the container. 
 
+This is a very slightly modified version of the original Wazuh image which downloads the apt signing key over HTTPS.
+
 ## Documentation
 
 * [Full documentation](http://documentation.wazuh.com)
